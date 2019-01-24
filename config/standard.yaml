@@ -1,0 +1,60 @@
+NAME: 'new_github_adam_lr1e-4_Aug_0.3_savemodel'
+MODEL:
+    backbone: 'vgg16_bn'   #  'vgg16' or 'vgg16_bn'
+    pretrained: True
+    loss_balance_weight: True
+    loss_weight_list: [1,1,1,1,1,1]
+    upsample_layer: 'github'  # 'deconv' or 'bilinear', 'github'
+    interpolate_mode: 'bilinear'  # 'bilinear' or 'nearest' if upsample_layer=='bilinear'
+    freeze_bn: True  # for batchnorm
+    freeze_bn_affine: True   # for batchnorm
+    init_mode: 'Gaussian'  # 'Gaussian' or 'xavier'
+
+    loss_func_logits: True # Default: True
+    loss_reduce: True  # Default: True
+    first_pad: 21  # Default: 34
+    
+TRAIN: 
+    init_lr: 0.0001
+    update_method: "Adam"  # 'Adam' or 'SGD', 'Adam-sgd', 'meteorshowers', 'github'
+    change_sgd_epoch: 6   # only for 'adam-sgd'
+    change_sgd_lr: 0.0001     # only for 'adam-sgd'
+
+    nepoch: 30
+    lr_list: [4, 8]
+    lr_cof: [1, 100, 0.01, 0.001]  ## [1, 100, 0.01, 0.001]
+    #lr_cof: [1, 10, 10, 10]  ## [1, 100, 0.01, 0.001]
+
+    fixed_input: False
+    batchsize: 1
+    num_workers: 4
+
+    update_iter: 10   # update gradients every n iters
+    disp_iter: 1000  # num of iter
+    save_iter: 1
+    test_iter: 1  # num of epoch
+
+    random_seed: 555  # -1 is none
+SAVE:
+    MAT:
+        normalize: True # whether divide the max value
+DATA:
+    root: /mnt/lustre/wuchongruo/projects/my_hed_new/data/HED-BSDS 
+    #mean: [104.00699, 116.66877, 122.67892]
+    mean: [122.67892, 116.66877, 104.00699]
+
+    AUG: 
+        ColorJitter: True
+        brightness: 0.3
+        contrast: 0.3
+        saturation: 0.3
+        hue: 0.1
+        HFlip: True
+    
+    train_list: train_pair.lst
+    test_list: test.lst
+
+
+
+
+
