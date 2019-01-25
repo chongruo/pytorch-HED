@@ -1,7 +1,7 @@
 # HED project
 This work is an implementation of paper [Holistically-Nested Edge Detection](https://github.com/chongruo/my_configuration.git)
 
----
+
 ## Performance
 
 On BSDS500
