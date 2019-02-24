@@ -65,7 +65,7 @@ Create your custom configuration file (xxx.yaml) in ./config, and modify config_
 <br>
 For testing, please install the Piotr's matlab toolbox first. Please refer to https://github.com/s9xie/hed
 
-### References
+## References
 ```
 
         @InProceedings{xie_HED,
