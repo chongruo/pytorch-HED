@@ -61,11 +61,12 @@ $ROOT
 To prepare for data, please refer to Training HED part in https://github.com/s9xie/hed
 
 <br>
+
 For training
-```python
+```
 python submit.py
 ```
-Create your custom configuration file (xxx.yaml) in ./config, and modify config_file in submit.py
+Create your custom configuration file (xxx.yaml) in ./config, and modify config_file in submit.py. 
 
 Our implementation is a little different form the original caffe version. We used vgg architecture with BN layers, and also more data argumentations.
 
