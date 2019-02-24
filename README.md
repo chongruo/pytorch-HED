@@ -83,7 +83,7 @@ Year  = {2015},
 }
 ```
 
-## Related Porjects
+## Related Projects
 [1]. [Original Implementation](https://github.com/s9xie/hed)    by @s9xie
 
 [2]. [hed](https://github.com/xwjabc/hed) by @xwjabc
