@@ -1,7 +1,7 @@
 # HED in pytorch
 This work is an implementation of paper [Holistically-Nested Edge Detection](https://github.com/chongruo/my_configuration.git).
 
-<a href="https://arxiv.org/abs/1504.06375" rel="Paper"><img src="http://www.arxiv-sanity.com/static/thumbs/1504.06375v2.pdf.jpg" alt="Paper" width="100%"></a>
+<a href="https://arxiv.org/pdf/1504.06375.pdf" rel="Paper"><img src="http://www.arxiv-sanity.com/static/thumbs/1504.06375v2.pdf.jpg" alt="Paper" width="100%"></a>
 
 
 
