@@ -1,6 +1,9 @@
 # HED in pytorch
 This work is an implementation of paper [Holistically-Nested Edge Detection](https://github.com/chongruo/my_configuration.git).
 
+<a href="https://arxiv.org/abs/1504.06375" rel="Paper"><img src="http://www.arxiv-sanity.com/static/thumbs/1504.06375v2.pdf.jpg" alt="Paper" width="100%"></a>
+
+
 
 ## Performance
 
@@ -32,7 +35,7 @@ Input Image | dsn1 | dsn2  | dsn3  | dsn4 | dsn5  | Fusioned Output (dsn6)  |
 
 | Method | ODS (Fusion/Merged) | OIS (Fusion/Merged) | AP (Fusion/Merged) |
 |:---|:---:|:---:|:---:| 
-| My Implementation | 0.78731/0.78280 | 0.80623/0.80356 | 0.78632/0.83851 |
+| Our Implementation | 0.78731/0.78280 | 0.80623/0.80356 | 0.78632/0.83851 |
 | Original Paper| 0.782/0.782 | 0.802/0.804 | 0.787/0.833 | 
 
 As mentioned in the paper, Fusion refers to the fusion-output(dsn6) and Merged means results of combination of fusion layer and side outputs.
@@ -57,22 +60,34 @@ $ROOT
 ```
 To prepare for data, please refer to Training HED part in https://github.com/s9xie/hed
 
+<br>
+For training
 ```python
 python submit.py
 ```
 Create your custom configuration file (xxx.yaml) in ./config, and modify config_file in submit.py
+
+Our implementation is a little different form the original caffe version. We used vgg architecture with BN layers, and also more data argumentations.
 
 <br>
 For testing, please install the Piotr's matlab toolbox first. Please refer to https://github.com/s9xie/hed
 
 ## References
 ```
-
-        @InProceedings{xie_HED,
-        author = {"Xie, Saining and Tu, Zhuowen"},
-        Title = {Holistically-Nested Edge Detection},
-        Booktitle = "Proceedings of IEEE International Conference on Computer Vision",
-        Year  = {2015},
-        }
+@InProceedings{xie_HED,
+author = {"Xie, Saining and Tu, Zhuowen"},
+Title = {Holistically-Nested Edge Detection},
+Booktitle = "Proceedings of IEEE International Conference on Computer Vision",
+Year  = {2015},
+}
 ```
+
+## Related Porjects
+1. [Original Implementation](https://github.com/s9xie/hed)    by @s9xie
+
+2. [hed](https://github.com/xwjabc/hed) by @xwjabc
+
+3. [hed-pytorch](https://github.com/meteorshowers/hed-pytorch) by @meteorshowers
+
+4. [hed(caffe)](https://github.com/zeakey/hed) by @zeakey
 
