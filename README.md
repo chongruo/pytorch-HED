@@ -41,10 +41,38 @@ As mentioned in the paper, Fusion refers to the fusion-output(dsn6) and Merged m
 
 ## How to Run
 ### Prerequisite:
-* Pytorch>0.3.1
+* Pytorch>=0.3.1
 * Tensorboard
 * [AttrDict](https://github.com/bcj/AttrDict)
 
 
-### Training 
+### Training/Testing
+The coda/data structure
+```shell
+$ROOT
+  - ckpt           # save checking points
+  - data           # contains BSDS500
+  - matlab_code    # test code
+  - pytorch-HED    # current repo
+```
+To prepare for data, please refer to Training HED part in https://github.com/s9xie/hed
+
+```python
+python submit.py
+```
+Create your custom configuration file (xxx.yaml) in ./config, and modify config_file in submit.py
+
+<br>
+For testing, please install the Piotr's matlab toolbox first. Please refer to https://github.com/s9xie/hed
+
+### References
+```
+
+        @InProceedings{xie_HED,
+        author = {"Xie, Saining and Tu, Zhuowen"},
+        Title = {Holistically-Nested Edge Detection},
+        Booktitle = "Proceedings of IEEE International Conference on Computer Vision",
+        Year  = {2015},
+        }
+```
 
