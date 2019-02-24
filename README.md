@@ -71,7 +71,7 @@ Create your custom configuration file (xxx.yaml) in ./config, and modify config_
 Our implementation is a little different form the original caffe version. We used vgg architecture with BN layers, and also more data argumentations.
 
 <br>
-For testing, please install the Piotr's matlab toolbox first. Please refer to https://github.com/s9xie/hed
+For testing, please install the Piotr's matlab toolbox first. Please refer to https://github.com/s9xie/hed.
 
 ## References
 ```
