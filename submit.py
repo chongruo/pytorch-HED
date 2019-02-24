@@ -4,7 +4,7 @@ import os,pdb,time
 #######################################################################################
 ## relative to config
 config_file='standard.yaml'
-cluster=True
+#cluster=True
 #cluster=False
 #######################################################################################
 
@@ -43,27 +43,11 @@ cur_time = time.strftime('_%b%d_%H-%M-%S')
 
 
 ### run script
-if cluster:
-    cmd = '''\
-        LOG="''' + ckpt_dir + '/' + '/'.join(dirs) + '/' + job_name + cur_time + '/'  + '''log.txt";
-        echo $LOG ;
-
-        newdir="''' + ckpt_dir + '/' + '/'.join(dirs) + '/' + job_name + cur_time + '''"; 
-        echo $newdir ;
-
-        mkdir $newdir
-
-
-        srun --mpi=pmi2 --partition=bj11part -n1 --gres=gpu:1 --ntasks-per-node=1 \
-                --job-name=''' + job_name + ''' -w BJ-IDC1-10-10-11-''' + str(sys.argv[1]) + '''  \
-        python run.py --mode train --cfg ''' +  config_file + ''' --time ''' + cur_time + '''$2>&1 | tee ${LOG}
-    '''
-else:
-    cmd = '''\
-        LOG="''' + ckpt_dir + '/' + '/'.join(dirs) + '/' + filename  + '''-`date +'%Y-%m-%d_%H-%M-%S'`_train" 
-        echo $LOG ;
-        python run.py --mode train --cfg ''' +  config_file + '''$2>&1 | tee ${LOG}
-    '''
+cmd = '''\
+    LOG="''' + ckpt_dir + '/' + '/'.join(dirs) + '/' + filename  + '''-`date +'%Y-%m-%d_%H-%M-%S'`_train" 
+    echo $LOG ;
+    python run.py --mode train --cfg ''' +  config_file + ''' --time ''' + cur_time + '''$2>&1 | tee ${LOG}
+'''
 
 os.system(cmd)
 
