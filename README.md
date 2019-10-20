@@ -1,6 +1,9 @@
 
 # HED in pytorch
 [![arXiv](https://img.shields.io/badge/arXiv-1504.06375-green)](https://arxiv.org/pdf/1504.06375.pdf)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 
 This work is an implementation of paper [Holistically-Nested Edge Detection](https://arxiv.org/pdf/1504.06375.pdf).
 
