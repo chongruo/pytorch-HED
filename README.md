@@ -1,5 +1,8 @@
+
 # HED in pytorch
-This work is an implementation of paper [Holistically-Nested Edge Detection](https://github.com/chongruo/my_configuration.git).
+[![arXiv](https://img.shields.io/badge/arXiv-1504.06375-green)](https://arxiv.org/pdf/1504.06375.pdf)
+
+This work is an implementation of paper [Holistically-Nested Edge Detection](https://arxiv.org/pdf/1504.06375.pdf).
 
 <a href="https://arxiv.org/pdf/1504.06375.pdf" rel="Paper"><img src="http://www.arxiv-sanity.com/static/thumbs/1504.06375v2.pdf.jpg" alt="Paper" width="100%"></a>
 
